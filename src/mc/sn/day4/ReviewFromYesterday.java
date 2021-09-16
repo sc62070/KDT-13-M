@@ -24,7 +24,9 @@ public class ReviewFromYesterday {
 		int result = 0; //변수선언 사용
 		result = val1 +val2;
 		return result;
+		//return 을 사용하는 이유는 return을 만듦으로써 다른쪽에서도 사용할수 있겠끔 설정하는것이다.
 		//return 0;//전체적으로 프로그래밍을 할때 중복제거, 고정제거는 필수.
+		
 	}
-
+	
 }
