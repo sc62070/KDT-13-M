@@ -5,7 +5,7 @@ public class CodeMain2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// PracticeCode 타입의 인스턴스를 생성해 pc라는 이름의 변수에 할당한다.
-		PracticeCode pc = new PracticeCode();
+		PracticeCode2 pc = new PracticeCode2();
 		pc.testArray2();
 		
 	}
