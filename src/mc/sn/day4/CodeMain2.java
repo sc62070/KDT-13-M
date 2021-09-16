@@ -1,6 +1,6 @@
 package mc.sn.day4;
 
-public class CodeMain {
+public class CodeMain2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

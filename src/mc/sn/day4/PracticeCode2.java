@@ -1,6 +1,6 @@
 package mc.sn.day4;
 
-public class PracticeCode {
+public class PracticeCode2 {
 	
 	public void testArray() {
 		int[] season = new int[4];
