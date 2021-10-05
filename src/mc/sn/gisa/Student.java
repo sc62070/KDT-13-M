@@ -80,8 +80,11 @@ public class Student {
 	
 	public String solveNo3() {
 		String result = null;
-		
-		
+		//영어 점수 +수학점수 >=120 자료에 한하여 총점 +점수 포인트의 합계는
+		int sum =0;
+		for(ScoreData data : list) {
+			
+		}
 		return result;
 	}
 	
