@@ -17,10 +17,10 @@ public class GisaTestClass {
 	public void startTest() {
 		
 		Student student = new Student("./data/Abc1115.csv");
-//		String ans1 = student.solveNo1();
-//		this.saveFile(ans1,1);
-		String ans2 = student.solveNo2();
-		this.saveFile(ans2,2);
+		String ans1 = student.solveNo1();
+		this.saveFile(ans1,1);
+//		String ans2 = student.solveNo2();
+//		this.saveFile(ans2,2);
 //		String ans3 = student.solveNo3();
 //		this.saveFile(ans3,3);
 //		String ans4 = student.solveNo4();

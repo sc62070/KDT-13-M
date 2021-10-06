@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Student {
 	//문제 푸는 클래스
@@ -58,8 +59,20 @@ public class Student {
 	
 	public String solveNo1() {
 		String result = null;
+		ArrayList<ScoreData> sortedList = new ArrayList<ScoreData>();
+		for(ScoreData data : list) {
+			if(data.getLocalCode().equals("B")) {
+				sortedList.add(data);
+			}
+		}
 		
+		Collections.sort(sortedList, new ScoreComparator());
 		
+		for(int i=0;i<20;i++) {
+			ScoreData temp = sortedList.get(i);
+			System.out.println(temp.getSno()+": "+temp.calcuNo2());
+		}
+		result = String.valueOf(sortedList.get(4).getSno());
 		return result;
 	}
 	
@@ -80,17 +93,42 @@ public class Student {
 	
 	public String solveNo3() {
 		String result = null;
-		//영어 점수 +수학점수 >=120 자료에 한하여 총점 +점수 포인트의 합계는
-		int sum =0;
+		//영어+수학점수 >= 120 자료에 한하여 총점+점수포인트의 합계는
+		int sum = 0;
 		for(ScoreData data : list) {
-			
+			if(data.calcuNo3()>=120) {
+				int point = 0;
+				if(data.getAccCode().equals("A")) {
+					point = 5;
+				} else if(data.getAccCode().equals("B")) {
+					point = 15;
+				} else {
+					point = 20;
+				}
+				sum = sum + data.getTotal()+point;
+			}
 		}
+		result = String.valueOf(sum);
 		return result;
 	}
 	
 	public String solveNo4() {
 		String result = null;
-		
+		int count = 0;
+		for(ScoreData data : list) {
+			if(data.getAccCode().equals("A")||data.getAccCode().equals("B")) {
+				int point = 15;
+				if(data.getLocalCode().equals("A")) {
+					point = 5;
+				} else if(data.getLocalCode().equals("B")) {
+					point = 10;
+				}
+				if(data.getKor()+point>=50) {
+					count++;
+				}
+			}
+		}
+		result = String.valueOf(count);
 		
 		return result;
 	}
