@@ -15,7 +15,7 @@ public class MapMain {
 	
 	public void test1() {
 		HashMap<String,Integer> map = new HashMap<String,Integer>();
-		map.put("one", new Integer(1));
+		map.put("one", Integer.valueOf(1));
 		map.put("two", 20); //
 		map.put("three", 3);
 		int size = map.size();
